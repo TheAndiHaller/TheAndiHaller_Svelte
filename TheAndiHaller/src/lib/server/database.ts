@@ -16,15 +16,3 @@ export const sequelize = new Sequelize(databaseUrl, {
   dialect: 'postgres', // or 'mysql', 'sqlite', etc.
   logging: false, // Disable logging or configure it
 });
-
-// Test the connection
-async function testConnection() {
-  try {
-    await sequelize.authenticate();
-    console.log('Connection has been established successfully.');
-  } catch (error) {
-    console.error('Unable to connect to the database:', error);
-  }
-}
-
-testConnection();
