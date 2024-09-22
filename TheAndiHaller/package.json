@@ -13,6 +13,7 @@
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"pg": "^8.13.0",
 		"svelte": "^4.2.7",
 		"svelte-check": "^3.6.0",
 		"typescript": "^5.0.0",
@@ -21,7 +22,6 @@
 	"type": "module",
 	"dependencies": {
 		"dotenv": "^16.4.5",
-		"pg": "^8.13.0",
 		"pg-hstore": "^2.3.4",
 		"sequelize": "^6.37.3"
 	}

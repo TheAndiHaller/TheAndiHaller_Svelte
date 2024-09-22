@@ -1,6 +1,8 @@
 // src/lib/database.ts
 import 'dotenv/config';
 import { Sequelize } from 'sequelize';
+import pg from "pg";
+
 
 console.log('Initializing database connection...');
 
@@ -13,6 +15,7 @@ if (!databaseUrl) {
 
 export const sequelize = new Sequelize(databaseUrl, {
   dialect: 'postgres',
+  dialectModule: pg,
   dialectOptions: {
     ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,  // For SSL if required in production
   },
